@@ -9,6 +9,10 @@ const timeInput = document.getElementById('time-input');
 const startCountButton = document.getElementById('start-count');
 const displaySection = document.getElementById('display-section');
 const form = document.querySelector('.input-form');
+const delModal = document.getElementById('del-modal');
+const deleteMessage = document.getElementById('delete-message');
+const cancelDel = document.getElementById('cancel-del');
+const delDel = document.getElementById('del-del');
 
 let events = JSON.parse(localStorage.getItem('events'));
 let currentPosition = 0;
@@ -116,11 +120,22 @@ const createEventCard = (Event, itemPosition) => {
 
     delButton.addEventListener('click', function() {
         
-        const indexToRemove = events.indexOf(Event);
-        events.splice(indexToRemove, 1);
-        const stringifiedEvents = JSON.stringify(events);
-        localStorage.setItem('events', stringifiedEvents);
-        location.reload();
+        
+        deleteMessage.textContent = `Are you sure you want to remove ${Event.name}?`;
+        delModal.style.display = "block";
+        
+        cancelDel.addEventListener('click', function () {
+            delModal.style.display = "none";
+        });
+        
+        delDel.addEventListener('click', function () {
+            // const indexToRemove = events.indexOf(Event);
+            events.splice(itemPosition, 1);
+            const stringifiedEvents = JSON.stringify(events);
+            localStorage.setItem('events', stringifiedEvents);
+            location.reload();
+        });
+        
         renderEvent(events);
     })
     
