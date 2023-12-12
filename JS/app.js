@@ -120,6 +120,7 @@ const createEventCard = (Event, itemPosition) => {
         events.splice(indexToRemove, 1);
         const stringifiedEvents = JSON.stringify(events);
         localStorage.setItem('events', stringifiedEvents);
+        location.reload();
         renderEvent(events);
     })
     
@@ -191,6 +192,9 @@ function formatTimeDifference (timeDifference, item) {
     }
     const Value = `${Days}:${doubleDigit(Hours)}:${doubleDigit(Minutes)}:${doubleDigit(Seconds)}`;
     
+    if (timeDifference < 0) {
+        return;
+    }
     countdown.textContent = Value;
 }
 
