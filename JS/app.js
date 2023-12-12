@@ -165,7 +165,9 @@ const renderEvent = (events) => {
 
 }
 
-renderEvent(events);
+if (events != null) {
+    renderEvent(events);
+}
 
 function timer (itemPosition) {
 
