@@ -13,6 +13,8 @@ const delModal = document.getElementById('del-modal');
 const deleteMessage = document.getElementById('delete-message');
 const cancelDel = document.getElementById('cancel-del');
 const delDel = document.getElementById('del-del');
+const congratsModal = document.getElementById('congrats-modal');
+const congratsMessage = document.getElementById('congrats-message');
 
 let events = JSON.parse(localStorage.getItem('events'));
 let currentPosition = 0;
@@ -154,7 +156,7 @@ const renderEvent = (events) => {
         const item = createEventCard(Event, itemPosition);
         setInterval(function() {
             const timeDifference = timer(itemPosition);
-            formatTimeDifference(timeDifference, item);
+            formatTimeDifference(timeDifference, item, itemPosition);
         }, 1000);
         displaySection.appendChild(item);
 
@@ -195,7 +197,7 @@ function timer (itemPosition) {
     return timeDifference;
 }
 
-function formatTimeDifference (timeDifference, item) {
+function formatTimeDifference (timeDifference, item, itemPosition) {
     const countdown = item.querySelector('#countdown');
     const Days = Math.floor(timeDifference / (24 * 60 * 60 * 1000));
     const Hours = Math.floor((timeDifference % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
@@ -205,9 +207,22 @@ function formatTimeDifference (timeDifference, item) {
     function doubleDigit (number) {
         return number.toString().padStart(2, '0');
     }
-    const Value = `${Days}:${doubleDigit(Hours)}:${doubleDigit(Minutes)}:${doubleDigit(Seconds)}`;
+    let Value = `${Days}:${doubleDigit(Hours)}:${doubleDigit(Minutes)}:${doubleDigit(Seconds)}`;
     
-    if (timeDifference < 0) {
+    if (timeDifference < 1000) {
+
+        if (timeDifference > 1) {
+            congratsMessage.textContent = `Countdown for ${events[itemPosition].name} has successfully elapsed`;    
+            congratsModal.style.display = "block";
+
+            window.addEventListener('click', function (event) {
+                if (event.target == congratsModal) {
+                    congratsModal.style.display = "none";
+                }
+            });
+        }
+
+        countdown.textContent = `0:00:00:00`;
         return;
     }
     countdown.textContent = Value;
