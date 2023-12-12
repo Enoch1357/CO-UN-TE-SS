@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO_UN_TE_SS</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&family=Imprima&family=Inter&family=Island+Moments&family=Jacques+Francois+Shadow&family=Montserrat:wght@300&family=Poppins&family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo-div">
+        <img class="logo" src="./Assets/CO_UN_TE_SS.png" alt="LOGO">
+    </div>
+
+    <!-- Input form -->
+    <div class="input-form">
+        <input type="text" name="Event" class="input-fields" id="name-input" placeholder="Event name">
+        <select name="Category" class="input-fields" id="category-select">
+            <option value="0" id="option-0">Choose category</option>
+            <option value="Birthday" id="birthday-option">Birthday</option>
+            <option value="Holiday" id="holiday-option">Holiday</option>
+            <option value="Business" id="business-option">Business</option>
+        </select>
+        <div class="date-n-time">
+            <input type="date" name="Date" class="input-fields" id="date-input">
+            <input type="time" name="Time" class="input-fields" id="time-input">
+        </div>
+
+        <button id="start-count">Initiate Countdown</button>
+    </div>
+    <!-- End of Input form -->
+
+    <!-- Display section -->
+    <section id="display-section">
+        <!-- <div id="outer-box">
+            <div id="inner-box">
+                <p id="event-display">Mom's Birthday</p>
+                <p id="category-display">Birthday</p>
+                <div id="outer-circle">
+                    <div id="inner-circle">
+                        <p id="date-display">8th December, 2023</p>
+                        <p id="countdown">9:21:08:19</p>
+                        <div id="label-div">
+                            <p>Days</p>
+                            <p>Hours</p>
+                            <p>Minutes</p>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./Assets/reset.png" alt="Reset" id="reset">
+                <img src="./Assets/delete.png" alt="Del" id="delete">
+            </div>
+        </div> -->
+    </section>
+    <!-- End of display section -->
+
+    <script type="module" src="./JS/app.js"></script>
+</body>
+</html>
