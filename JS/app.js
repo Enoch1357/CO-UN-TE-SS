@@ -167,6 +167,8 @@ const renderEvent = (events) => {
 
 if (events != null) {
     renderEvent(events);
+} else {
+    events = [];
 }
 
 function timer (itemPosition) {
