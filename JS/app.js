@@ -16,6 +16,10 @@ const delDel = document.getElementById('del-del');
 const congratsModal = document.getElementById('congrats-modal');
 const congratsMessage = document.getElementById('congrats-message');
 
+const startArray = [];
+const stringifiedStartArray = JSON.stringify(startArray);
+localStorage.setItem('events', stringifiedStartArray);
+
 let events = JSON.parse(localStorage.getItem('events'));
 let currentPosition = 0;
 
@@ -165,11 +169,7 @@ const renderEvent = (events) => {
 
 }
 
-if (events != null) {
-    renderEvent(events);
-} else {
-    events = [];
-}
+renderEvent(events);
 
 function timer (itemPosition) {
 
