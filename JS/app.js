@@ -16,17 +16,7 @@ const delDel = document.getElementById('del-del');
 const congratsModal = document.getElementById('congrats-modal');
 const congratsMessage = document.getElementById('congrats-message');
 
-
 let events = JSON.parse(localStorage.getItem('events'));
-
-if (events === null) {
-    const startArray = [];
-    const stringifiedStartArray = JSON.stringify(startArray);
-    localStorage.setItem('events', stringifiedStartArray);
-}
-
-renderEvent(events);
-
 let currentPosition = 0;
 
 const createEventCard = (Event, itemPosition) => {
@@ -169,7 +159,6 @@ cancelDel.addEventListener('click', function () {
 });
 
 delDel.addEventListener('click', function () {
-    // const indexToRemove = events.indexOf(Event);
     events.splice(currentPosition, 1);
     const stringifiedEvents = JSON.stringify(events);
     localStorage.setItem('events', stringifiedEvents);
@@ -291,3 +280,4 @@ startCountButton.addEventListener('click', function() {
     renderEvent(events);
 });
 
+renderEvent(events);
