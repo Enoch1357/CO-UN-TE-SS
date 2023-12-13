@@ -280,4 +280,7 @@ startCountButton.addEventListener('click', function() {
     renderEvent(events);
 });
 
+if (events === null) {
+    events = [];
+}
 renderEvent(events);
