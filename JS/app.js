@@ -136,7 +136,7 @@ const createEventCard = (Event, itemPosition) => {
 
 }
 
-const renderEvent = (events) => {
+const renderEvent = function (events) {
     displaySection.innerHTML = "";
 
     for (let itemPosition = 0; itemPosition < events.length; itemPosition++) {
