@@ -259,9 +259,7 @@ startCountButton.addEventListener('click', function() {
         const currentDate = new Date();
         const timeDifference = targetTime - currentDate;
         
-        if (timeDifference > 0) {
-            alert('Countdown initiation success');
-        } else {
+        if (timeDifference <= 0) {
             alert('The specified time has already passed. Kindly select a future date');
             return;
         }
