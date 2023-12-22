@@ -26,11 +26,11 @@ const createEventCard = (Event, itemPosition) => {
     outerBox.setAttribute('id', 'outer-box');
 
     if (Event.category == "Birthday") {
-        outerBox.style.background = "radial-gradient(227.6% 142.85% at 97.39% 2.29%, #69BDB3 0%, rgba(146, 199, 193, 0.63) 30.82%, rgba(114, 192, 182, 0.92) 80.93%, rgba(217, 217, 217, 0.00) 100%)";
+        outerBox.style.background = "radial-gradient(227.6% 142.85% at 97.39% 2.29%, #69BDB3 0%, rgb(146, 199, 193) 30.82%, rgb(114, 192, 182) 80.93%, rgba(217, 217, 217, 0.00) 100%)";
     } else if (Event.category == "Holiday") {
-        outerBox.style.background = "linear-gradient(242deg, #9369BD -98.55%, rgba(169, 146, 199, 0.63) 5.6%, rgba(139, 114, 192, 0.92) 65%, rgba(194, 179, 208, 0.00) 103.55%)";
+        outerBox.style.background = "linear-gradient(242deg, #9369BD -98.55%, rgb(169, 146, 199) 5.6%, rgb(139, 114, 192) 65%, rgba(194, 179, 208, 0.00) 103.55%)";
     } else if (Event.category == "Business") {
-        outerBox.style.background = "linear-gradient(242deg, #52B962 -98.55%, rgba(128, 203, 149, 0.63) 5.6%, rgba(92, 195, 133, 0.92) 65%, rgba(132, 211, 164, 0.00) 103.55%)";
+        outerBox.style.background = "linear-gradient(242deg, #52B962 -98.55%, rgb(128, 203, 149) 5.6%, rgb(92, 195, 133) 65%, rgba(132, 211, 164, 0.00) 103.55%)";
     }
 
     const innerBox = document.createElement('div');
