@@ -6,6 +6,7 @@ body {
     background-image: url(./glamorous\ group.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .logo-div {
