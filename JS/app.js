@@ -162,9 +162,9 @@ delDel.addEventListener('click', function () {
     events.splice(currentPosition, 1);
     const stringifiedEvents = JSON.stringify(events);
     localStorage.setItem('events', stringifiedEvents);
+    delModal.style.display = "none";
     location.reload();
     renderEvent(events);
-    // delModal.style.display = "none";
 });
 
 function timer (itemPosition) {
