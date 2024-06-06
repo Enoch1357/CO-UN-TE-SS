@@ -29,6 +29,8 @@
           padding: 20px;
           border: 1px solid #ccc;
           border-radius: 5px;
+          display: flex;
+          flex-direction: column;
         }
       </style>
 </head>
@@ -83,9 +85,12 @@
     <!-- Delete Modal -->
     <div id="del-modal" class="delete-modal">
         <div class="modal-content">
-          <p id="delete-message" style="font-size: 20px;"></p>
-          <button id="cancel-del">Cancel</button>
-          <button id="del-del">Remove</button>
+            <p id="delete-message" style="font-size: 20px;"></p>
+            <div class="dels-box">
+                <button id="cancel-del">Cancel</button>
+                <button id="del-del">Remove</button>
+            </div>
+          
         </div>
     </div>
 
