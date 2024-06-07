@@ -103,17 +103,17 @@ button:active {
     height: inherit;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 50px;
-    row-gap: 25px;
+    justify-content: space-evenly;
+    row-gap: 15px;
     padding: 10px;
 }
 
 #outer-box {
     border: 0;
     border-radius: 15px;
-    width: 375px;
-    height: 350px;
-    padding: 10px;
+    width: 300px;
+    height: 280px;
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,9 +126,9 @@ button:active {
 #inner-box {
     /* border: 0; */
     border-radius: 10px;
-    width: 335px;
-    height: 310px;
-    padding: 10px;
+    width: 268px;
+    height: 248px;
+    padding: 8px;
     background-color: rgb(186, 186, 186);
     display: flex;
     flex-direction: column;
@@ -138,25 +138,25 @@ button:active {
 
 #inner-box p {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 #inner-box #event-display {
     font-family: 'Fauna One', serif;
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 }
 
 #inner-box #category-display {
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    font-size: large;
+    font-size: medium;
 }
 
 #outer-circle {
     /* border: 0; */
-    width: 280px;
-    height: 240px;
+    width: 224px;
+    height: 192px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -168,8 +168,8 @@ button:active {
 
 #inner-circle {
     /* border: 0; */
-    width: 270px;
-    height: 230px;
+    width: 216px;
+    height: 184px;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 1);
     display: flex;
@@ -188,36 +188,37 @@ button:active {
     margin-bottom: 0;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
-    font-size: 45px;
+    font-size: 36px;
 }
 
 #label-div {
     margin-top: 0;
-    gap: 7px;
+    gap: 6px;
     position: absolute;
-    top: 150px;
+    top: 120px;
     display: flex;
 }
 
 #label-div p {
     font-family: 'Inter', sans-serif;
     font-weight: normal;
+    font-size: small;
 }
 
 #reset {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: 270px;
-    left: 5px;
+    top: 216px;
+    left: 4px;
 }
 
 #delete {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
-    top: 270px;
-    left: 300px;
+    top: 216px;
+    left: 240px;
 }
 
 #inner-box img:hover {
