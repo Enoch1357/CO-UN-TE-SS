@@ -25,12 +25,11 @@ body {
 }
 
 .input-form {
-    /* border: 0; */
+    /* border: 1px solid red; */
     margin-top: 25px;
     padding: 5px;
     gap: 10px;
     height: 200px;
-    width: 35%;
     align-self: center;
     display: flex;
     flex-direction: column;
@@ -78,8 +77,6 @@ body {
 }
 
 button {
-    width: 175px;
-    background-color: rgba(101, 165, 179, 1);
     color: white;
     height: 40px;
     border-radius: 10px;
@@ -95,6 +92,12 @@ button:hover {
 
 button:active {
     cursor: default;
+}
+
+#start-count {
+    background-color: rgba(101, 165, 179, 1);
+    align-self: center;
+    width: 60%;
 }
 
 #display-section {
@@ -233,4 +236,51 @@ button:active {
     /* border: 1px dotted black; */
     display: flex;
     justify-content: space-evenly;
+}
+
+#cancel-del {
+    border: 1px solid rgba(101, 165, 179, 1);
+    color: rgba(101, 165, 179, 1);
+    width: 40%;
+}
+
+#cancel-del:hover {
+    background-color: rgba(101, 165, 179, 1);
+    color: white;
+}
+
+#del-del {
+    width: 40%;
+    background-color: red;
+    box-shadow: 1px 1px 1px grey;
+}
+
+@media screen and (maxwidth:480px) {
+    .input-form {
+        width: 80%;
+    }
+
+    #outer-box {
+        width: 80%;
+    }
+}
+
+@media screen and (maxwidth:820px) {
+    .input-form {
+        width: 50%;
+    }
+    
+    #outer-box {
+        width: 40%;
+    }
+}
+
+@media screen and (maxwidth:1024px) {
+    .input-form {
+        width: 40%;
+    }
+    
+    #outer-box {
+        width: 40%;
+    }
 }
