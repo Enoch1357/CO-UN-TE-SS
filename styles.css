@@ -241,7 +241,7 @@ button:active {
 #cancel-del {
     border: 1px solid rgba(101, 165, 179, 1);
     color: rgba(101, 165, 179, 1);
-    width: 40%;
+    width: 45%;
 }
 
 #cancel-del:hover {
@@ -250,7 +250,7 @@ button:active {
 }
 
 #del-del {
-    width: 40%;
+    width: 45%;
     background-color: red;
     box-shadow: 1px 1px 1px grey;
 }
